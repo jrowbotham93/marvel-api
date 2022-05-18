@@ -33,7 +33,6 @@ Use these queries as a template to test to the endpoints.
             name
         }
     }
-}
 ```
 
 # Technology
@@ -53,7 +52,12 @@ Use these queries as a template to test to the endpoints.
 
 I chose GraphQL because it gives the FE the flexibility to dictate exactly what it needs from the server. This would be particularly important on mobile where we only want to request the data that is required.
 
+Search:
+
 The endpoint findMovie is hooked up to a "fuzzy search" mongoose method which will return matches to substrings. E.g. searching for 'Iron man' will also return 'Iron man 2'.
+
+Pagination:
+
 The endpoint getMovies has a limit and an offset variable. The FE could use these for pagination.
 
 I also included integration tests for these endpoints: `./src/graphql/index.spec.ts`
