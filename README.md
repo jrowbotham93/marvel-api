@@ -82,3 +82,8 @@ I wanted to make this app portable / scalable / deployable. Using Docker and com
 Fuzzy search on mongo DB is not performant. It uses a regex which would be horrible if there were lots of movies. (Luckily Marvel don't have too many).
 
 Lack of structure in Mongo schemas. There is currently one Movie schema. This could be broken down into Person Movie Character. But given time restraints this worked fine.
+
+# TODO:
+
+Fix integration tests (might not be working after dockerizing)
+Fix database seeding.

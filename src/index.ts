@@ -2,10 +2,12 @@ import "dotenv/config";
 
 import { server } from "./loaders/server";
 import { database } from "./loaders/database";
+import { seedDatabase } from "./data/seed";
 
 async function main(): Promise<void> {
   try {
     await database();
+    await seedDatabase(); // TODO: this should go somewhere else
 
     const apolloServer = await server();
 
