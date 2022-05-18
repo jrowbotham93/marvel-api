@@ -13,7 +13,7 @@ pids
 *.seed
 *.pid.lock
 .env
-.mongo
+mongo
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
