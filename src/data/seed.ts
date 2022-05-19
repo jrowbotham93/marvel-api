@@ -2,7 +2,7 @@ import { Movie } from "../models";
 
 async function seedDatabase() {
   try {
-    console.log("daseedDatabaseing DB");
+    console.log("seeding DB");
     return [
       {
         name: "Iron man",
