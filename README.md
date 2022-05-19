@@ -6,7 +6,7 @@ This service provides users with information about Marvel films
 
 Add an env file in the root of this directory (see sample env for details)
 
-Run: `docker-compose up --build`
+Run: `npm i && docker-compose up --build`
 
 Navigate to: `http://localhost:4000/`
 
