@@ -1,10 +1,18 @@
 import { createTestClient } from "apollo-server-testing";
 import { ApolloServer, gql } from "apollo-server";
+import { disconnect } from "mongoose";
 
 import { typeDefs, resolvers } from ".";
 import { Movie } from "../models";
+import { database } from "../loaders/database";
 
 describe("graphql", () => {
+  beforeAll(async () => {
+    await database();
+  });
+  afterAll(async () => {
+    await disconnect();
+  });
   it("findMovie", async () => {
     const { query } = createTestClient(
       new ApolloServer({
